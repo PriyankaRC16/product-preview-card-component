@@ -4,36 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="styles.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Product preview card component</title>
 </head>
-<div class="main-card">
-<body style="background: hsl(30, 38%, 92%)">
-<img src="images/image-product-desktop.jpg" class="image-background image">
-  <div class="text-card">
-    <div class="perfume-background perfume-text">PERFUME</div>
-    <div class="title-background title-text">Gabrielle</div>
-    <div class="title-background title-text">Essence Eau</div>
-    <div class="title-background title-text">De Parfum</div>
-    
-    <div class="paragraph-background paragraph-text">A floral, solar and voluptuous</div>
-    <div class="paragraph-background paragraph-text">interpretation composed by</div>
-    <div class="paragraph-background paragraph-text">Olivier Polge, Perfumer-Creator </div>
-    <div class="paragraph-background paragraph-text">for the House of CHANEL.</div>
-    
-    <div class="price-background">
-      <div class="total-price">$149.99</div>
-      <div class="strike">$169.99</div>
+<body>
+  <main class="main-card">
+    <div class="picture">
+      <img src="images/image-product-mobile.jpg" alt="QR Code - Visit Frontend Mentor">
     </div>
-    
-    <div class="button"><img src="images/icon-cart.svg">Add to Cart</div>
+  
+    <div class="text-card">
+      <h1>Perfume</h1>
+      <h2>
+        Gabrielle Essence Eau De Parfum
+      </h2> 
+      <p>A floral, solar, and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p> 
+      <div class="price-background">
+        <span class="total-price">$149.99</span>
+        <s class="strike">$169.99</s>
       </div>
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Priyanka Roy Choudhury</a>.
-      </div>
-      </div>
+      <button><img src="images/icon-cart.svg" class="img-icon">Add to Cart</button>
     </div>
+  </main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by Priyanka Roy Choudhury.
+    </p>
+  </footer>
 </body>
-
-
 </html>
