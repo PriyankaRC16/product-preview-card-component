@@ -66,16 +66,17 @@ body {
     height: 31.25rem;
 }
 
-.picture {
+picture {
     flex: 1;
     overflow: hidden;
     border-radius: 20px 0 0 20px;
 }
 
-.picture img {
-    object-fit: cover;
-    display: block;
-    width: 100%;
+picture img {
+    display: flex;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 20px 0 0 20px;
     height: 500px;
 }
 
@@ -146,6 +147,7 @@ button {
     background: var(--dark-cyan);
     color: var(--white);
     font-weight: var(--font-weight-700);
+    border: none;
 }
 
 button:hover {
@@ -161,19 +163,24 @@ button:hover {
     font-weight: var(--font-weight-500);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 23.4375rem) {
     body {
         padding: var(--padding-10px);
     }
 
     .main-card {
         max-width: 100%;
+        border-radius: 20px;
         border-radius: 0; 
         flex-direction: column; 
     }
 
-    .picture {
-        border-radius: 20px 20px 0 0; 
+    picture img {
+        height: auto; 
+        max-width: 100%; 
+        object-fit: contain;
+        display: block;
+        border-radius: 20px;
     }
 
     .text-card {
@@ -195,13 +202,14 @@ button:hover {
 }
 
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 90rem) {
     .main-card {
         max-width: 40rem;
         flex-direction: row; 
+        border-radius: 20px;
     }
 
-    .picture {
+    picture {
         border-radius: 20px 0 0 20px; 
     }
 }
