@@ -1,19 +1,19 @@
 :root {
-    --dark-cyan: hsl(158, 36%, 37%);
-    --cream: hsl(30, 38%, 92%);
-    --very-dark-blue: hsl(212, 21%, 14%);
-    --dark-grayish-blue: hsl(228, 12%, 48%);
-    --white: hsl(0, 0%, 100%);
-    --font-family-montserrat: 'Montserrat';
-    --font-family-fraunces: 'Fraunces';
-    --font-weight-500: 500;
-    --font-weight-700: 700;
-    --font-size: 0.875rem;
+    --color-primary: hsl(158, 36%, 37%); 
+    --color-background: hsl(30, 38%, 92%);
+    --color-secondary: hsl(212, 21%, 14%); 
+    --color-text: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%); 
+    --font-family-primary: 'Montserrat';
+    --font-family-secondary: 'Fraunces';
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-size-base: 0.875rem;
+    --spacing-10px: 10px;
+    --spacing-20px: 20px;
     --margin-bottom-10px: 10px;
     --margin-bottom-20px: 20px;
     --margin-bottom-30px: 30px;
-    --padding-10px: 10px;
-    --padding-20px: 20px;
 }
 
 *,
@@ -44,12 +44,12 @@ img, picture {
 }
 
 body {
-    padding: var(--padding-20px);
+    padding: var(--spacing-20px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--cream);
+    background: var(--color-background);
     min-height: 100vh;
     line-height: 1.5;
 }
@@ -60,7 +60,7 @@ body {
     justify-content: center;
     max-width: 100%;
     margin: 0 auto;
-    background: var(--white);
+    background: var(--color-white);
     border-radius: 20px;
     overflow: hidden;
     height: auto;
@@ -90,36 +90,36 @@ picture img {
 
 .text-card {
     flex: 1;
-    padding: var(--padding-20px);
+    padding: var(--spacing-20px);
     display: flex;
     flex-direction: column; 
     justify-content: center;
 }
 
-h1 {
-    color: var(--dark-grayish-blue);
-    font-family: var(--font-family-montserrat);
-    font-size: var(--font-size);
-    font-weight: var(--font-weight-500);
+.perfume-text {
+    color: var(--color-text);
+    font-family: var(--font-family-primary);
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
     letter-spacing: 0.4375rem;
     margin-bottom: var(--margin-bottom-30px);
     text-transform: uppercase;
 }
 
 h2 {
-    color: var(--very-dark-blue);
-    font-family: var(--font-family-fraunces);
+    color: var(--color-secondary);
+    font-family: var(--font-family-secondary);
     font-size: 1.8125rem;
-    font-weight: var(--font-weight-700);
+    font-weight: var(--font-weight-bold);
     letter-spacing: 0.1269rem;
     margin-bottom: var(--margin-bottom-30px);
 }
 
 p {
-    color: var(--dark-grayish-blue);
-    font-family: var(--font-family-montserrat);
-    font-size: var(--font-size);
-    font-weight: var(--font-weight-500);
+    color: var(--color-text);
+    font-family: var(--font-family-primary);
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
     margin-bottom: var(--margin-bottom-30px);
 }
 
@@ -130,17 +130,17 @@ p {
 }
 
 .total-price {
-    color: var(--dark-cyan);
-    font-family: var(--font-family-fraunces);
+    color: var(--color-primary);
+    font-family: var(--font-family-secondary);
     font-size: 2.5rem;
-    font-weight: var(--font-weight-700);
+    font-weight: var(--font-weight-bold);
 }
 
 .strike {
-    color: var(--dark-grayish-blue);
-    font-family: var(--font-family-montserrat);
-    font-size: var(--font-size);
-    font-weight: var(--font-weight-500);
+    color: var(--color-text);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
     margin: 20px; 
 }
 
@@ -152,30 +152,29 @@ button {
     flex-shrink: 0;
     padding: 10px 96px;
     border-radius: 10px;
-    background: var(--dark-cyan);
-    color: var(--white);
-    font-weight: var(--font-weight-700);
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
     border: none;
     white-space: nowrap;
 }
 
 button:hover {
-    background-color: var(--very-dark-blue);
+    background-color: var(--color-text);
     cursor: pointer;
 }
 
 .attribution {
     margin-top: var(--margin-bottom-20px);
-    color: var(--very-dark-blue);
-    font-family: var(--font-family-montserrat);
-    font-size: var(--font-size);
-    font-weight: var(--font-weight-500);
+    color: var(--color-secondary);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
 }
 
-@media screen and (max-width: 23.4375rem) {
-   
+@media screen and (max-width: 23.4375em) {
     body {
-        padding: var(--padding-10px);
+        padding: var(--spacing-10px);
     }
 
     .main-card {
@@ -184,12 +183,12 @@ button:hover {
         flex-direction: column;
         height: auto;
     }
-
+    
     .image-container {
         width: 100%;
         flex-direction: column;
         align-items: center;
-        border-radius: 20px 20px 0 0; 
+        border-radius: 20px 20px 0 0;
         overflow: hidden;
     }
 
@@ -198,11 +197,11 @@ button:hover {
         width: 100%;
         object-fit: cover;
         display: block;
-        border-radius: 20px 20px 0 0; 
+        border-radius: 20px 20px 0 0;
     }
 
     .text-card {
-        padding: var(--padding-20px);
+        padding: var(--spacing-20px);
     }
 
     .price-background {
@@ -215,49 +214,27 @@ button:hover {
     }
 
     button {
-        padding: var(--padding-10px);
+        padding: var(--spacing-10px);
     }
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 40em) {
     .main-card {
-        max-width: 60rem; 
+        max-width: 40em;
     }
 
     .image-container {
-        gap: 20px; 
+        gap: 20px;
         height: 100%;
     }
 
     picture img {
         height: 100%;
         object-fit: cover;
-        border-radius: 20px 0 0 20px; 
+        border-radius: 20px 0 0 20px;
     }
 
     .text-card {
-        padding: var(--padding-20px);
-    }
-}
-
-
-@media screen and (min-width: 40rem) {
-    .main-card {
-        max-width: 40rem; 
-    }
-
-    .image-container {
-        gap: 20px; 
-        height: 100%;
-    }
-
-    picture img {
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px 0 0 20px; 
-    }
-
-    .text-card {
-        padding: var(--padding-20px);
+        padding: var(--spacing-20px);
     }
 }
