@@ -58,7 +58,7 @@
   }
   
   .image-container {
-    height: 100%;
+    height: auto;
     display: flex;
     padding: 0;
     align-items: flex-start;
@@ -70,6 +70,7 @@
     flex: 1;
     overflow: hidden;
     border-radius: 20px 0 0 20px;
+    height: auto;
   }
   
   picture img {
@@ -77,7 +78,7 @@
     max-width: 100%;
     margin: 0;
     border-radius: 20px 0 0 20px;
-    height: auto;
+    height: 100%;
   }
   
   .text-card {
@@ -101,10 +102,10 @@
   h2 {
     color: var(--color-secondary);
     font-family: 'Fraunces';
-    font-size: 1.8125rem;
+    font-size: 1.9rem;
     font-weight: 700;
-    letter-spacing: 0.15rem;
-    margin-bottom: 30px;
+    letter-spacing: 0.19rem;
+    margin-bottom: 4px;
   }
   
   p {
