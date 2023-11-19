@@ -1,9 +1,9 @@
 :root {
-    --color-primary: hsl(158, 36%, 37%); 
+    --color-primary: hsl(158, 36%, 37%);
     --color-background: hsl(30, 38%, 92%);
-    --color-secondary: hsl(212, 21%, 14%); 
+    --color-secondary: hsl(212, 21%, 14%);
     --color-text: hsl(228, 12%, 48%);
-    --color-white: hsl(0, 0%, 100%); 
+    --color-white: hsl(0, 0%, 100%);
   }
   
   *,
@@ -17,20 +17,26 @@
     text-size-adjust: none;
   }
   
-  body, h2, p {
+  body,
+  h2,
+  p {
     margin-block-end: 0;
-  }   
+  }
   
-  h2, button {
+  h2,
+  button {
     line-height: 1.1;
   }
   
- h2 {
+  h2 {
     text-wrap: balance;
   }
   
-  img, picture {
+  img,
+  picture {
     max-width: 100%;
+    height: auto;
+    display: block; 
   }
   
   body {
@@ -45,47 +51,36 @@
   }
   
   .main-card {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
     max-width: 100%;
     margin: 0 auto;
     background: var(--color-white);
     border-radius: 20px;
     overflow: hidden;
-    height: auto;
+    display: flex;
     flex-direction: column;
   }
   
   .image-container {
     height: auto;
-    display: flex;
     padding: 0;
-    align-items: flex-start;
-    gap: 10px;
-    flex-direction: column;
   }
   
   picture {
-    flex: 1;
     overflow: hidden;
-    border-radius: 20px 0 0 20px;
-    height: auto;
+    border-radius: 20px 0 0 0px;
   }
   
   picture img {
-    display: flex;
-    max-width: 100%;
-    margin: 0;
-    border-radius: 20px 0 0 20px;
-    height: 100%;
+    display: block;
+    width: 100%;
+    border-radius: 20px 0 0 0px;
   }
   
   .text-card {
     flex: 1;
     padding: 20px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
   }
   
@@ -111,7 +106,7 @@
   p {
     color: var(--color-text);
     font-family: 'Montserrat';
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 30px;
   }
@@ -146,7 +141,7 @@
     font-family: 'Montserrat';
     font-size: 0.875rem;
     font-weight: 500;
-    margin: 20px; 
+    margin: 20px;
   }
   
   button {
@@ -185,23 +180,22 @@
     }
   
     .image-container {
-      flex: 1;
+      flex: 1 1 5.5%;
       gap: 20px;
-      height: 100%;
+      height: auto;
       flex-direction: row;
-   
     }
   
     picture img {
       height: auto;
       object-fit: cover;
-      border-radius: 0;
+      border-radius: 20px 0 0 0;
     }
   
     .text-card {
       padding: 20px;
-      flex: 1;
-      align-items: flex-start; 
+     flex: 1;
+      align-items: flex-start;
     }
   }
   
